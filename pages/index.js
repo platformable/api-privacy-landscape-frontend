@@ -374,7 +374,7 @@ const DevRegOpsPrivacyEngineeringToolsDescription="Tools that enable privacy reg
               {/* <Link className="navbar-brand" href="/"><img src="../homepage/logo_temporary_apilandscape.png" alt="apidays" className="home-logo align-self-start" /></Link> */}
               <div className="text-center flex-grow-1">
                 <h1 className="text-white text-center py-2 text-white fw-bold">
-                  The API Landscape
+                  The API Privacy Landscape
                 </h1>
                 <p className="text-center sm-text text-white">
                   Last Update: {`${getDay()} ${getMonth()} ${getYear()}`}
