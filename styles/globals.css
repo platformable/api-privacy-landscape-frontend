@@ -1,9 +1,23 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap'); */
+@font-face {
+  font-family: "DroidSans";
+  src: url("/fonts/DroidSans.ttf");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+@font-face {
+  font-family: "DroidSans";
+  src: url("/fonts/DroidSans-Bold.ttf");
+  font-style: medium;
+  font-weight: 500;
+  font-display: swap;
+}
 html,
 body {
   padding: 0;
   margin: 0;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'DroidSans', sans-serif;
  background-color: #f0f0f0 !important;
  color:#0c4b6e;
 }
@@ -25,8 +39,7 @@ a {
   color:#0c4b6e !important;
 }
 .logo {
-  height: 34px;
-  width: 209px;
+
   max-height: 34px;
   max-width: 209px;
 }
@@ -41,7 +54,7 @@ a {
   --pink:#f8c700;
   --turquoise:#28c8dd;
   --darkturquoise:darkturquoise;
-  --dark-orange:#f29262;
+  --dark-orange:#FDAB40;
   --bg-light-blue:#BDDAE2;
   --company-color:#0c4b6e;
   --company-orange-color:#f34d08;
@@ -49,14 +62,14 @@ a {
 }
 
 .bg-company-orange-color {
-  background-color:var(--company-orange-color) !important;
+  background-color:#FDAB40 !important;
 }
 
 .bg-dark-main-color {
-  background-color: #1b4965;
+  background-color: #3448BC;
 }
 .mobile-bg-dark-company-color {
-  background-color: #1b4965;
+  background-color: #007CC1;
   
 }
 .btn-dark-gray {
@@ -68,7 +81,7 @@ a {
 }
 
 .bg-dark-company-color {
-  background-color:#1b4965;
+  background-color:#007CC1;
   width:40px;
   padding:10px 0;
   writing-mode:vertical-rl;
@@ -77,7 +90,18 @@ a {
   display:flex;
   align-items:center;
   justify-content:center;
-  
+}
+
+.bg-dark-company-color2 {
+  background-color:#3448BC;
+  width:40px;
+  padding:10px 0;
+  writing-mode:vertical-rl;
+  transform:rotate(180deg);
+  text-align:center;
+  display:flex;
+  align-items:center;
+  justify-content:center;
 }
 
 .bg-light-company-color {
@@ -306,7 +330,7 @@ place-items: center;
 
 
 .home-landscape,.intro-text {
-  background-color: #0ab;
+  background-color: #6366ED;
   margin:0;
 }
 .landscape-box-card {
@@ -361,9 +385,9 @@ place-items: center;
 
 
 .heroBg {
-  background-image: url('../public/homepage/home_background_squares.png');
+/*   background-image: url('../public/homepage/home_background_squares.png'); */
   background-size:contain;
-  background-color: #0ab;
+  background-color: #6366ED;
 }
 
 .main-box {
