@@ -80,13 +80,12 @@ export default function CompanyCard({company,index,handleLoading}) {
         <div className="card-middle mt-1">
                 {newParentCategorySlug?.map((category,index)=>{
                   return (<span className={`card-middle-tag mb-1 me-1 text-black
-                  ${category.includes("API Lifecycle Platform") && "bg-dark-main-color text-white"}
-                  ${category==="API Standards/Protocols" && "bg-dark-main-color text-white"}
-                  ${category==="Backend Building Tools" && "bg-dark-main-color text-white"}
-                  ${category==="Business processes as an API/API-as a Product" && "bg-dark-main-color text-white"}
-                  ${category==="Business processes as an API/API-as a Products" && "bg-dark-main-color text-white"}
-                  ${category==="Integration Platform as a Service" && "bg-dark-main-color text-white"}
-                  ${category==="Vertical API Abstractions" && "bg-dark-main-color text-white"}
+                  ${category==="DevRegOps & Privacy Engineering Tools" && "bg-main-color1 text-white"}
+                  ${category==="Data Lifecycle and Data Governance" && "bg-main-color2 text-white"}
+                  ${category==="Privacy Workflow and Management" && "bg-main-color1 text-white"}
+                  ${category==="Security for Privacy" && "bg-main-color2 text-white text-white"}
+                  ${category==="Data intermediaries" && "bg-main-color1 text-white"}
+                  ${category==="Consumer Facing Data Privacy Solutions" && "bg-main-color2 text-white"}
                   `}>{category}</span>)
                 })}
    
