@@ -1214,3 +1214,8 @@ border-radius:10px;
 .border-end-company-color {
   border-right:1px solid #6366ED;
 }
+
+.change-img-box {
+  min-height:120px;
+  
+  }
