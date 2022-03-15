@@ -24,7 +24,7 @@ import {
 
 export default function Homepage({ data }) {
 
-  console.log(data)
+
 
 
   const router = useRouter();
@@ -62,7 +62,7 @@ const subcategories = [
   "Identity & Consent Manager",
   "Data Subject Access Requests (DSARs)",
   "Website and Mobile Tracker Scanning",
-  "Data Discovery, Classification and Mapping",
+  "Data Discovery, Classification & Mapping",
   "Data Retention and Deletion",
   "Privacy Information Maturity",
   "Deidentification, Pseudonymization, Anonymization",
@@ -77,8 +77,8 @@ const subcategories = [
 
 TopBarProgress.config({
 barColors: {
-"0": "#828BF4",
-"1.0": "#FDAB40"
+"0": "#319ef9",
+"1.0": "#319ef9"
 },
 shadowBlur: 5
 });
@@ -181,7 +181,7 @@ const DevRegOpsPrivacyEngineeringToolsDescription="Tools that enable privacy reg
     (company, index) =>
       company?.parentCategorySlug?.includes(
         "Data Lifecycle and Data Governance") &&
-      company?.subcategory?.includes("Data Discovery, Classification and Mapping") 
+      company?.subcategory?.includes("Data Discovery, Classification & Mapping") 
   ).sort((a, b) => a.name.localeCompare(b.name))
 
   const  DataLifecycleandDataGovernanceANDDataRetentionandDeletion =  data.values.filter(
@@ -471,7 +471,7 @@ const DevRegOpsPrivacyEngineeringToolsDescription="Tools that enable privacy reg
 
           <section className="home-landscape heroBg d-none d-md-block py-1">
             <ReactTooltip
-              backgroundColor="#04a5b6"
+              backgroundColor="#0c4b6e"
               textColor="#fff"
               id="companyName-tooltip"
             />
@@ -953,9 +953,9 @@ const DevRegOpsPrivacyEngineeringToolsDescription="Tools that enable privacy reg
                         </div>
                       </div>
 
-                      <div class="landscape-container">
-                        <div class="landscape-category-container">
-                          <div class="landscape-subcategory-box">
+                      <div className="landscape-container">
+                      <div className="landscape-category-container">
+                      <div class="landscape-subcategory-box">
                             {data <= 0 && <Loader />}
                             <HomepageSubcategory
                               subcategoryName="Data Discovery, Classification and Mapping"
@@ -965,6 +965,12 @@ const DevRegOpsPrivacyEngineeringToolsDescription="Tools that enable privacy reg
                               }
                             />
                           </div>
+                        </div>
+                      </div>
+
+                      <div class="landscape-container">
+                        <div class="landscape-category-container">
+                         
                           <div class="landscape-subcategory-box">
                             {data <= 0 && <Loader />}
                             <HomepageSubcategory
@@ -1183,30 +1189,7 @@ const DevRegOpsPrivacyEngineeringToolsDescription="Tools that enable privacy reg
                   </div>
                 </div>
 
-                {/* <div className="col-md-12 my-1">
-                  <div class="home-main-container ">
-                    <div class="ApiStandardsandProtocols">
-                      <span className="">
-                        Vertical API <br />
-                        Abstractions ({apiSecuritySupportTools.length})
-                      </span>
-                    </div>
-                    <div class="category-container ">
-                      <div class="landscape-container">
-                        <div class="landscape-category-container">
-                          <div class="landscape-subcategory-box">
-                            {data <= 0 && <Loader />}
-                            <HomepageSubcategory
-                              subcategoryName="Login"
-                              handleCompany={handleEntity}
-                              filteredCategory={VerticalAPIAbstractionsANDLogin}
-                            />
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div> */}
+          
               </div>
             </div>
           </section>
