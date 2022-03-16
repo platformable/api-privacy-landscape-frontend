@@ -65,9 +65,10 @@ a {
   background-color:#FDAB40 !important;
 }
 
-.bg-dark-main-color {
-  background-color: #3448BC;
+.bg-company-color {
+  background-color:#6366ED;
 }
+
 .mobile-bg-dark-company-color {
   background-color: #007CC1;
   
@@ -1218,4 +1219,8 @@ border-radius:10px;
 .change-img-box {
   min-height:120px;
   
+  }
+
+  .bg-dark-main-color {
+    background-color: #3448BC;
   }

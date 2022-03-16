@@ -205,8 +205,8 @@ export default function CompanyDetailsName({ data }) {
         <section className="mobile-profile d-xs-block d-md-none">
           <div className="container">
             <div className="row ">
-              <div className="col-md-3 p-y2 bg-white mobile-profile-left border-end-company-color">
-                <div className="company-logo d-flex justify-content-center align-items-center my-5">
+              <div className="col-md-3  bg-white mobile-profile-left border-end-company-color">
+                <div className="company-logo d-flex justify-content-center align-items-center">
                   <a href={url} target="_blank">
                     {logo === "" || null ? (
                       <img
@@ -286,7 +286,7 @@ export default function CompanyDetailsName({ data }) {
                   {subcategory?.split(",").map((subcat, index) => {
                     return (
                       <span
-                        className={`test text-center badge mb-1 mt-1 text-black d-block
+                        className={`text-center badge mb-1 mt-1 text-black d-block
               ${subcat === "DevRegOps" && "bg-main-color-1-light"}
               ${
                 subcat === "Privacy Engineering Tools" &&
@@ -378,10 +378,10 @@ export default function CompanyDetailsName({ data }) {
                       </div>{" "}
                       {/* icon */}
                       <div className="foundedIn-text ml-5">
-                        <p className="sm-text mt-1 ml-2">Founded in</p>
+                        <p className="mt-1 ml-2">Founded in</p>
                       </div>
                       <div className="year">
-                        <p className="fw-bold mx-1">{yearFounded}</p>
+                        <p className="fw-bold mx-1 sm-text">{yearFounded}</p>
                       </div>
                     </div>
                     {/*  founded top left */}
@@ -413,7 +413,7 @@ export default function CompanyDetailsName({ data }) {
                       </div>{" "}
                       {/* icon */}
                       <div className="foundedIn-text ml-2">
-                        <p className="sm-text mt-2 ml-2">Headquarter</p>
+                        <p className="sm-text mt-2 ml-2">Headquarters</p>
                       </div>
                       <div className="year ">
                         <p className="fw-bold mx-1 mt-1">
@@ -441,7 +441,7 @@ export default function CompanyDetailsName({ data }) {
                     {crunchbase && (
                       <li class="list-group-item border-0 ">
                         <img
-                          src="https://logo.clearbit.com/hot2tak.com"
+                          src="../../crunchbase-logo.png"
                           alt=""
                           className="rounded"
                           onClick={() => handleSocial(crunchbase)}
@@ -493,677 +493,83 @@ export default function CompanyDetailsName({ data }) {
                   </ul>
                 </div>{" "}
                 {/* company-socials-url */}
-                <div className="update-company px-0 mx-0">
+                <div className="update-company px-0 mx-0 my-2">
+                
                   <a
                     href="https://platformable.typeform.com/to/KDwe0Tbk"
                     target="_blank"
-                    className="btn bg-company-orange-color text-white mx-0"
+                    className="bg-dark-main-color rounded py-1 text-white mx-0 my-5 px-2"
                   >
-                    Update company data
+                    Update company datax
                   </a>
                   {/* <span className="text-sm text-gray">Wrong info? suggest </span> */}
                 </div>
               </div>{" "}
               {/* profile left */}
-              <div className="col-md-9 px-0">
-                <div className="profile-right-side bg-white p-2">
-                  <div className="row border-bottom">
-                    <div className="col-md-12 d-flex">
-                      <div className="me-3 p-2 ">
-                        <p className="text-company-color sm-text">
-                          Known industries <br />
-                          working in
-                        </p>
-                        {/* <img src="../../apilandscape__known industries working in_80x50.png" alt="" className="md-icon"/> */}
-                      </div>{" "}
-                      {/* div */}
-                      <div className="">
-                        {industryGroups
-                          ? industryGroups.split(",").map((industry, index) => {
-                              return (
-                                <>
-                                  <span
-                                    className={`badge text-black me-1 ${handleColors()}`}
-                                  >
-                                    {industry}
-                                  </span>
-                                </>
-                              );
-                            })
-                          : "-"}
-                      </div>
-                      {/* div known-industries*/}
-                    </div>
-                    {/* div known-industries*/}
-                  </div>
-                  {/* row */}
-
-                  <div className="row">
-                    <div className="col-md-3 p-2 border-end-company-color border-bottom">
-                      <p className="text-company-color sm-text">
-                        Estimated <br />
-                        Revenue Range
+              {/* RIGHT COLUMN MOBILE */}
+              <div className="col-md-9 px-0 mt-2">
+                <div className="container"></div>
+                <div className="row">
+                  <div className="col-12">
+                    <div className="box-container bg-white d-flex flex-column align-items-center">
+                      <p className="text-company-color m-0 px-2 sm-text mb-3">
+                        Stage (Seed, A, B, C)
                       </p>
-
-                      <h3 className="fw-bold fs-4 text-center mt-5">
-                        {estimatedRevenueRange ? (
-                          estimatedRevenueRange
-                        ) : (
-                          <h6 className="text-center fw-bold ">-</h6>
-                        )}
-                      </h3>
-
-                      {/* <img src="../money-line.png" alt="" /> */}
-                    </div>
-                    {/* revnue*/}
-                    <div className="col-md-9 p-2 border-bottom">
-                      <p className="text-company-color sm-text">
-                        Content addressing
-                      </p>
-                      <div className="content-addressing-box d-flex gap-3 align-content-start my-2">
-                        <div className="content-addresing-box-icon">
-                          <img
-                            src="../../apilandscape__financial services_45x45.png"
-                            alt=""
-                            className="sd-icon"
-                          />
-                        </div>
-                        <div className="content-addressing-url mb-4">
-                          <p className="text-company-color sm-text m-0">
-                            Banking/Finance
-                          </p>
-                          {/* <a href="" className="m-0 p-0 xs-text">http://www.bnkbl.com/financialservices</a> */}
-                          <p className="text-company-color xs-text">-</p>
-                        </div>
-                      </div>{" "}
-                      {/* content addressing box */}
-                      <div className="content-addressing-box d-flex gap-3 align-content-start my-2">
-                        <div className="content-addresing-box-icon">
-                          <img
-                            src="../../apilandscape__health sector_45x45.png"
-                            alt=""
-                            className="sd-icon"
-                          />
-                        </div>
-                        <div className="content-addressing-url">
-                          <p className="text-company-color sm-text m-0">
-                            Health Sector
-                          </p>
-                          <p className="text-company-color xs-text">-</p>
-                        </div>
-                      </div>{" "}
-                      {/* content addressing box */}
-                      <p className="text-company-color">
-                        <br />
-                      </p>
-                      <div className="content-addressing-box d-flex gap-3 align-content-start my-2">
-                        <div className="content-addresing-box-icon">
-                          <img
-                            src="../../apilandscape__sustainability_45x45.png"
-                            alt=""
-                            className="sd-icon"
-                          />
-                        </div>
-                        <div className="content-addressing-url mb-4">
-                          <p className="text-company-color sm-text m-0">
-                            Sustainability
-                          </p>
-                          {/*  <a href="" className="m-0 p-0 xs-text">http://www.bnkbl.com/financialservices</a> */}
-                          <p className="text-company-color xs-text">-</p>
-                        </div>
-                      </div>{" "}
-                      {/* content addressing box */}
-                      <div className="content-addressing-box d-flex gap-3 align-content-start my-2">
-                        <div className="content-addresing-box-icon">
-                          <img
-                            src="../../apilandscape__government_45x45.png"
-                            alt=""
-                            className="sd-icon"
-                          />
-                        </div>
-                        <div className="content-addressing-url">
-                          <p className="text-company-color sm-text m-0">
-                            Government
-                          </p>
-                          <p className="text-company-color xs-text">-</p>
-                        </div>
-                      </div>{" "}
-                      {/* content addressing box */}
-                    </div>
-                    {/* content addressing*/}
-                  </div>
-                  {/* row */}
-
-                  <div className="row">
-                    <div className="col-md-4 text-center p-2 ">
-                      <p className="text-company-color m-0 px-2 sm-text">
-                        Number of Customers
-                      </p>
-
-                      {numbersOfCustomers ? (
-                        <h6 className="fw-bold px-2 pt-2">
-                          {" "}
-                          {reduceThounsand(numbersOfCustomers)}{" "}
-                        </h6>
-                      ) : (
-                        <h6 className="fw-bold my-2 px-2"> - </h6>
-                      )}
-                      <img
-                        src="../../apilandscape__number_of_customers_50x60.png"
-                        alt=""
-                        className="md-icon my-1 px-2"
-                      />
-                    </div>
-                    <div className="col-md-4 text-center p-2  border-top">
-                      <img
-                        src="../../apilandscape__known_partnerships_API_45x45.png"
-                        alt=""
-                        className="md-icon my-1 px-2 align-self-center"
-                      />
-                      <p className="text-company-color m-0 px-2 sm-text">
-                        Known partnerships <br />
-                        (API industry)
-                      </p>
-                      <div className="known-partnership-logo d-flex flex-wrap align-items-center  ms-2">
-                        {logoApiIndustry ? (
-                          logoApiIndustry.split(",").map((logo, index) => {
-                            return (
-                              <div className="partnertship-logo">
-                                <img
-                                  src={handleImages(logo)}
-                                  className="img-fluid me-1"
-                                />
-                              </div>
-                            );
-                          })
-                        ) : (
-                          <Unknown />
-                        )}
-                      </div>
-                    </div>
-
-                    <div className="col-md-4 text-center p-2 border-top">
-                      <img
-                        src="../../apilandscape__known_partnerships_no_API_45x45.png"
-                        alt=""
-                        className="md-icon my-1 px-2 align-self-center"
-                      />
-                      <p className="text-company-color m-0 px-2 sm-text">
-                        Known partnerships <br />
-                        (Non-API industry)
-                      </p>
-                      <div className="known-partnership-logo  text-center flex-grow-1 ms-2">
-                        {knownPartnershipsNonApi ? (
-                          knownPartnershipsNonApi
-                            .split(",")
-                            .map((partner, index) => {
-                              return (
-                                <>
-                                  <p className="sm-text my-2 fw-bold me-1">
-                                    {partner}
-                                  </p>
-                                </>
-                              );
-                            })
-                        ) : (
-                          <Unknown />
-                        )}
-                      </div>
-                    </div>
-                  </div>
-                  {/* row */}
-
-                  <div className="row">
-                    <div className="col-md-4 text-center border-top p-2 border-end-company-color border-top-company-color ">
-                      <p className="text-company-color m-0 px-2 sm-text ">
-                        Headcount
-                      </p>
-                      {headcount ? (
-                        <h6 className="fw-bold my-2 px-2">{headcount}</h6>
-                      ) : (
-                        <h6 className="fw-bold my-2 px-2"> - </h6>
-                      )}
-                      <img
-                        src="../../apilandscape_headcount_80x50_companies card.png"
-                        alt=""
-                        className="xd-icon my-1 px-2"
-                      />
-                    </div>
-                    <div className="col-md-4 text-center border-top p-2 border-end-company-color">
-                      <p className="text-company-color m-0 px-2 sm-text">
-                        Diversity Score
-                      </p>
-                      <h6 className="fw-bold my-2 px-2">
-                        {handleScore(
-                          womanInManagement,
-                          nonWhitePeopleInManagement
-                        )}
+                      <h6>
+                        <span className="badge bg-lightgreen text-black">
+                          {stage ? stage : "-"}
+                        </span>
                       </h6>
-                      <img
-                        src="../../apilandscape_diversity_spot_80x50.png"
-                        alt=""
-                        className="xd-icon my-1 px-2"
-                      />
                     </div>
+                  </div>
 
-                    <div className="col-md-4 text-center border-top p-2">
-                      <p className="text-company-color m-0 px-2 sm-text">
-                        Women in management?
+                  <div className="col-12">
+                    <div className="box-container bg-white d-flex flex-column align-items-center">
+                      <p className="text-company-color m-0 px-2 sm-text mb-3 ">
+                        Last funding
                       </p>
-                      {womanInManagement ? (
-                        <h6 className="fw-bold my-2 px-2">
-                          {womanInManagement}
-                        </h6>
-                      ) : (
-                        <Unknown />
-                      )}
-                      <img
-                        src="../../apilandscape__women_in_management_50x55.png"
-                        alt=""
-                        className="sd-icon my-1 px-2"
-                      />
-                    </div>
 
-                    <div className="col-md-6 text-center border-top p-2 border-end-company-color">
-                      <p className="text-company-color m-0 px-2 sm-text">
-                        Diverse management?
-                      </p>
-                      {nonWhitePeopleInManagement ? (
-                        <h6 className="fw-bold my-2 px-2">
-                          {nonWhitePeopleInManagement}
-                        </h6>
-                      ) : (
-                        <Unknown />
-                      )}
-                      <img
-                        src="../../apilandscape__diverse_management_50x55.png"
-                        alt=""
-                        className="sd-icon my-1 px-2"
-                      />
-                    </div>
-
-                    <div className="col-md-6 text-center border-top p-2">
-                      <p className="text-company-color m-0 px-2 sm-text">
-                        Positions vacant Q4 2021
-                      </p>
-                      {numberOfPositionsVacantInPastYear ? (
-                        <h6 className="fw-bold my-2 px-2">
-                          {numberOfPositionsVacantInPastYear}
-                        </h6>
-                      ) : (
-                        <Unknown />
-                      )}
-                      <img
-                        src="../../apilandscape__positions_vacant_50x55.png"
-                        alt=""
-                        className="sd-icon my-1 px-2"
-                      />
-                    </div>
-                  </div>
-                  {/* row */}
-
-                  <div className="row">
-                    <div className="col-md-3 text-center border-top border-end-company-color p-2">
-                      <div className="new-product-features-top ">
-                        <img
-                          src="../../apilandscape_new_product_feature_60x50.png"
-                          alt=""
-                          className="sd-icon my-1 px-2 align-self-center"
-                        />
-                        <p className="text-company-color m-0 px-2 sm-text">
-                          New Product Features
-                        </p>
-                      </div>{" "}
-                      {/* features-top */}
-                      <div className="new-product-features-bottom">
-                        {totalNumberOfNewProducFeaturesInLastYear ? (
-                          <h6 className="text-center fw-bold">
-                            {totalNumberOfNewProducFeaturesInLastYear}
-                          </h6>
-                        ) : (
-                          <Unknown />
-                        )}
-                      </div>{" "}
-                      {/* features-top */}
-                    </div>
-                    <div className="col-md-3 text-center border-top border-end-company-color p-2">
-                      <div className="new-product-features-top ">
-                        <img
-                          src="../../apilandscape_active_products_60x50.png"
-                          alt=""
-                          className="sd-icon my-1 px-2 align-self-center"
-                        />
-                        <p className="text-company-color m-0 px-2 sm-text">
-                          Active products
-                        </p>
-                      </div>{" "}
-                      {/* features-top */}
-                      <div className="new-product-features-bottom">
-                        {totalProductsActive ? (
-                          <h6 className="text-center fw-bold">
-                            {totalProductsActive}
-                          </h6>
-                        ) : (
-                          <Unknown />
-                        )}
-                      </div>{" "}
-                      {/* features-top */}
-                    </div>
-
-                    <div className="col-md-3 text-center border-top border-end-company-color p-2">
-                      <div className="new-product-features-top ">
-                        <img
-                          src="../../apilandscape_patents_granted_60x50.png"
-                          alt=""
-                          className="sd-icon my-1 px-2 align-self-center"
-                        />
-                        <p className="text-company-color m-0 px-2 sm-text">
-                          Patents Granted
-                        </p>
-                      </div>{" "}
-                      {/* features-top */}
-                      <div className="new-product-features-bottom">
-                        {patentsGranted ? (
-                          <h6 className="text-center fw-bold">
-                            {patentsGranted}
-                          </h6>
-                        ) : (
-                          <Unknown />
-                        )}
-                      </div>{" "}
-                      {/* features-top */}
-                    </div>
-
-                    <div className="col-md-3 text-center border-top p-2">
-                      <div className="new-product-features-top ">
-                        <img
-                          src="../../apilandscape_acquisitions_60x50.png"
-                          alt=""
-                          className="sd-icon my-1 px-2 align-self-center"
-                        />
-                        <p className="text-company-color m-0 px-2 sm-text">
-                          Acquisition (of other entities)
-                        </p>
-                      </div>{" "}
-                      {/* features-top */}
-                      <div className="new-product-features-bottom">
-                        {acquisitions ? (
-                          <h6 className="text-center fw-bold">
-                            {acquisitions}
-                          </h6>
-                        ) : (
-                          <Unknown />
-                        )}
-                      </div>{" "}
-                      {/* features-top */}
-                    </div>
-                  </div>
-                  {/* row */}
-
-                  <div className="row">
-                    <div className="col-md-6 text-center border-top">
-                      <div className="new-product-features-top align-items-center">
-                        <img
-                          src="../../apilandscape_known_standards_used_integrated_60x50.png"
-                          alt=""
-                          className="xd-icon my-1 px-2 align-self-center"
-                        />
-                        <p className="text-company-color m-0 px-2 sm-text">
-                          Known standards used/integrated
-                        </p>
-                      </div>{" "}
-                      {/* features-top */}
-                      <p className="text-center">Coming Soon</p>
-                    </div>
-                    <div className="col-md-6 text-center border-top">
-                      <div className="new-product-features-top align-items-center">
-                        <img
-                          src="../../apilandscape_privacy_specific_features_60x50.png"
-                          alt=""
-                          className="xd-icon my-1 px-2 align-self-center"
-                        />
-                        <p className="text-company-color m-0 px-2 sm-text">
-                          Privacy specific features included
-                        </p>
-                      </div>{" "}
-                      {/* features-top */}
-                      {privacySpecificFeaturesIncluded ? (
-                        <p className="sm-text p-3">
-                          {privacySpecificFeaturesIncluded}
-                        </p>
-                      ) : (
-                        <Unknown />
-                      )}
-                    </div>
-                  </div>
-                  {/* row */}
-
-                  <div className="row mobile-charts border-top border-bottom p-5">
-                    <div className="col-md-9 text-center md-border-end-company-color">
-                      <div className="new-product-features-top  align-items-center mb-3">
-                        <img
-                          src="../../apilandscape_blog_per_quarter_45x45.png"
-                          alt=""
-                          className="sd-icon my-1 px-2 align-self-center"
-                        />
-                        <p className="text-company-color m-0 p2 sm-text">
-                          Blogs per quarter
-                        </p>
-                      </div>{" "}
-                      {/* features-top */}
-                      <BarChart
-                        positionsPastYear={numberOfPositionsVacantInPastYear}
-                        positionThisYearq1={numberOfPositionsVacantIn2022}
-                      />
-                    </div>
-                    <div className="col-md-3 text-center border-top mt-5">
-                      <p className="text-company-color  p-2  sm-text text-center">
-                        Participation in{" "}
-                      </p>
-                      <div className="text-center ">
-                        {" "}
-                        <img
-                          src="../apidayslogo_icon.png"
-                          alt=""
-                          className=" mb-5  lg-icon"
-                        />
-                      </div>
-                      <div className="text-center ">
-                        <ul className="timeline">
-                          <li
-                            className={
-                              apidays2018 === "TRUE" && "timeline-item"
-                            }
-                          >
-                            <p class="float-right">2018</p>
-                            {/* <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque scelerisque diam non nisi semper, et elementum lorem ornare. Maecenas placerat facilisis mollis. Duis sagittis ligula in sodales vehicula....</p> */}
-                          </li>
-                          <li
-                            className={
-                              apidays2019 === "TRUE" && "timeline-item"
-                            }
-                          >
-                            <p class="float-right">2019</p>
-                            {/* <p>Curabitur purus sem, malesuada eu luctus eget, suscipit sed turpis. Nam pellentesque felis vitae justo accumsan, sed semper nisi sollicitudin...</p> */}
-                          </li>
-                          <li
-                            className={
-                              apidays2020 === "TRUE" && "timeline-item"
-                            }
-                          >
-                            <p class="float-right">2020</p>
-                            {/* <p>Fusce ullamcorper ligula sit amet quam accumsan aliquet. Sed nulla odio, tincidunt vitae nunc vitae, mollis pharetra velit. Sed nec tempor nibh...</p> */}
-                          </li>
-                          <li
-                            className={
-                              apidays2021 === "TRUE" && "timeline-item"
-                            }
-                          >
-                            <p class="float-right">2021</p>
-                            {/* <p>Fusce ullamcorper ligula sit amet quam accumsan aliquet. Sed nulla odio, tincidunt vitae nunc vitae, mollis pharetra velit. Sed nec tempor nibh...</p> */}
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-                  {/* row */}
-
-                  <div className="row">
-                    <div className="col-md-6 p-2">
-                      <div className="new-product-features-top text-center">
-                        <img
-                          src="../../apilandscape_active_tech_count_45x45.png"
-                          alt=""
-                          className="md-icon my-1 px-2 align-self-center"
-                        />
-                        <p className="text-company-color m-0 px-2 sm-text">
-                          Active tech count
-                        </p>
-                      </div>{" "}
-                      {/* features-top */}
-                      <div className="new-product-features-bottom">
-                        {activeTechCount ? (
-                          <h6 className="text-center fw-bold my-2">
-                            {activeTechCount}
-                          </h6>
-                        ) : (
-                          <Unknown />
-                        )}
-                      </div>{" "}
-                      {/* features-top */}
-                    </div>
-                    <div className="col-md-6 border-top p-2">
-                      <div className="new-product-features-top text-center">
-                        <img
-                          src="../../apilandscape_IT_spend_45x45.png"
-                          alt=""
-                          className="md-icon my-1 px-2 align-self-center"
-                        />
-                        <p className="text-company-color m-0 px-2 sm-text">
-                          IT Spend
-                        </p>
-                      </div>{" "}
-                      {/* features-top */}
-                      <div className="new-product-features-bottom text-center">
-                        {itSpend ? (
-                          <h6 className="text-center">
-                            {" "}
-                            {reduceThounsand(itSpend)}
-                          </h6>
-                        ) : (
-                          <Unknown />
-                        )}
-                      </div>{" "}
-                      {/* features-top */}
-                    </div>
-                  </div>
-                  {/* row  */}
-
-                  <div className="row">
-                    <div className="col-md-12 border-top p-3 border-bottom">
-                      <div className="new-product-features-top text-center">
-                        <img
-                          src="../../apilandscape_top_5_investors__60x45.png"
-                          alt=""
-                          className="xd-icon my-1 px-2 align-self-center"
-                        />
-                        <p className="text-company-color m-0 px-2 sm-text">
-                          Top 5 Investors
-                        </p>
-                      </div>{" "}
-                      {/* features-top */}
-                      <div className="px-2">
-                        <p className="sm-text mt-2">
-                          {top5Investors ? (
-                            top5Investors
-                          ) : (
-                            <h6 className="text-center my-5 fw-bold">-</h6>
-                          )}
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                  {/* row */}
-
-                  <div className="row ">
-                    <div className="col-md-3 border-end-company-color p-2">
-                      <div className="box-container d-flex flex-column align-items-center">
-                        <p className="text-company-color m-0 px-2 sm-text mb-3">
-                          Stage (Seed, A, B, C)
-                        </p>
+                      {lastFundingDate ? (
                         <h6>
-                          <span className="badge bg-lightgreen text-black">
-                            {stage ? stage : "-"}
+                          <span className="text-black fw-bold sm-text">
+                            {lastFundingDate}
                           </span>
                         </h6>
-                      </div>
+                      ) : (
+                        <Unknown />
+                      )}
+                      <img
+                        src="../../apilandscape_last_funding_date__60x45.png"
+                        alt=""
+                        className="md-icon my-1 px-2 align-self-center"
+                      />
                     </div>
-                    <div className="col-md-2 border-top p-2">
-                      <div className="box-container d-flex flex-column align-items-center">
-                        <p className="text-company-color m-0 px-2 sm-text mb-3">
-                          Total Funding
-                        </p>
-                        {totalFunding ? (
-                          <h6>
-                            <span className="fw-bold text-black">
-                              {reduceNumber(totalFunding)}
-                            </span>
-                          </h6>
-                        ) : (
-                          <Unknown />
-                        )}
-                        <img
-                          src="../../apilandscape_total_funding__60x45.png"
-                          alt=""
-                          className="md-icon my-1 px-2 align-self-center"
-                        />
-                      </div>
-                    </div>
-                    <div className="col-md-2 border-top p-2">
-                      <div className="box-container d-flex flex-column align-items-center">
-                        <p className="text-company-color m-0 px-2 sm-text mb-3 ">
-                          Last funding date
-                        </p>
+                  </div>
 
-                        {lastFundingDate ? (
-                          <h6>
-                            <span className="text-black fw-bold">
-                              {lastFundingDate}
-                            </span>
-                          </h6>
-                        ) : (
-                          <Unknown />
-                        )}
-                        <img
-                          src="../../apilandscape_last_funding_date__60x45.png"
-                          alt=""
-                          className="md-icon my-1 px-2 align-self-center"
-                        />
-                      </div>
+                  <div className="col-md-12">
+                    <div className="bg-white d-flex flex-column align-items-center">
+                      <p className="text-company-color m-0 px-2 sm-text mb-3">
+                        Total Funding
+                      </p>
+                      {totalFunding ? (
+                        <h6>
+                          <span className="fw-bold text-black">
+                            {reduceNumber(totalFunding)}
+                          </span>
+                        </h6>
+                      ) : (
+                        <Unknown />
+                      )}
+                      <img
+                        src="../../apilandscape_total_funding__60x45.png"
+                        alt=""
+                        className="md-icon my-1 px-2 align-self-center"
+                      />
                     </div>
-                    <div className="col-md-2 border-top p-2">
-                      <div className="box-container d-flex flex-column align-items-center">
-                        <p className="text-company-color m-0 px-2 sm-text mb-3">
-                          Lead Investor{" "}
-                        </p>
+                  </div>
 
-                        {numberLeadOfLeadInvestors ? (
-                          <h6>
-                            <span className="text-black fw-bold">
-                              {numberLeadOfLeadInvestors}
-                            </span>
-                          </h6>
-                        ) : (
-                          <Unknown />
-                        )}
-                        <img
-                          src="../../apilandscape_lead_investors__60x45.png"
-                          alt=""
-                          className="md-icon my-1 px-2 align-self-center"
-                        />
-                      </div>
-                    </div>
-                    <div className="col-md-3 p-2 border-top">
+                  <div className="col-md-12">
+                    <div className="bg-white d-flex flex-column align-items-center">
                       <div className="box-container d-flex flex-column align-items-center">
                         <p className="text-company-color m-0 px-2 sm-text">
                           Investors{" "}
@@ -1186,139 +592,370 @@ export default function CompanyDetailsName({ data }) {
                       </div>
                     </div>
                   </div>
-                  {/* row */}
-                  <div className="row">
-                    <div className="col-md-3 border-end-company-color border-top p-3">
-                      <div className="box-container d-flex flex-column align-items-center">
-                        <p className="text-company-color m-0 px-2 sm-text text-center">
-                          Acquisition Price
-                        </p>
-                        {acquisitionPrice ? (
-                          <h6>
-                            <span className="badge  fw-bold">
-                              {acquisitionPrice}
-                            </span>
-                          </h6>
-                        ) : (
-                          <Unknown />
-                        )}
-                        <img
-                          src="../../apilandscape_acquisition_price__60x45.png"
-                          alt=""
-                          className="md-icon my-1 px-2 align-self-center"
-                        />
-                      </div>
-                    </div>
-                    <div className="col-md-2 border-end-company-color border-top p-3">
-                      <div className="box-container d-flex flex-column align-items-center">
-                        <p className="text-company-color m-0 px-2 sm-text text-center">
-                          Acquisition Type
-                        </p>
-                        {acquisitionType ? (
-                          <h6>
-                            <span className="badge fw-bold">
-                              {acquisitionType}
-                            </span>
-                          </h6>
-                        ) : (
-                          <Unknown />
-                        )}
-                        <img
-                          src="../../apilandscape_acquisition_type__60x45.png"
-                          alt=""
-                          className="md-icon my-1 px-2 align-self-center"
-                        />
-                      </div>
 
-                      <div className="box-container d-flex flex-column align-items-center">
-                        <p className="text-company-color m-0 px-2 sm-text text-center">
-                          Acquired by
-                        </p>
-                        {acquiredBy ? (
-                          <h6>
-                            <span className="badge fw-bold">{acquiredBy}</span>
-                          </h6>
-                        ) : (
-                          <Unknown />
-                        )}
-                        {/* <img src="../../apilandscape_acquisition_type__60x45.png" alt="" className="md-icon my-1 px-2 align-self-center" /> */}
-                      </div>
-                    </div>
-                    <div className="col-md-2 border-end-company-color border-top p-3">
+                  <div className="col-md-12">
+                    <div className="bg-white d-flex flex-column align-items-center">
                       <div className="box-container d-flex flex-column align-items-center">
                         <p className="text-company-color m-0 px-2 sm-text">
-                          IPO <br /> Date
+                          Investors{" "}
                         </p>
-                        {ipoDate ? (
+                        <p></p>
+                        {numberOfInvestors ? (
                           <h6>
-                            <span className="badge  fw-bold">{ipoDate}</span>
-                          </h6>
-                        ) : (
-                          <Unknown />
-                        )}
-                        <img
-                          src="../../apilandscape_IPO_date__60x45.png"
-                          alt=""
-                          className="md-icon my-1 px-2 align-self-center"
-                        />
-                      </div>
-                    </div>
-                    <div className="col-md-2 border-end-company-color border-top p-3">
-                      <div className="box-container d-flex flex-column align-items-center">
-                        <p className="text-company-color m-0 px-2 sm-text text-center">
-                          Money Raised at IPO
-                        </p>
-                        {moneyRaisedAtIpo ? (
-                          <h6>
-                            <span className="badge  text-black">
-                              {moneyRaisedAtIpo}
+                            <span className="text-black fw-bold">
+                              {numberOfInvestors}
                             </span>
                           </h6>
                         ) : (
                           <Unknown />
                         )}
                         <img
-                          src="../../apilandscape_money_raised_at_IPO_60x45.png"
+                          src="../../apilandscape_investors__60x45.png"
                           alt=""
                           className="md-icon my-1 px-2 align-self-center"
                         />
                       </div>
                     </div>
-                    <div className="col-md-3  border-top p-3">
+                  </div>
+
+                  <div className="col-md-12">
+                    <div className="bg-white d-flex flex-column align-items-center">
                       <div className="box-container d-flex flex-column align-items-center">
                         <p className="text-company-color m-0 px-2 sm-text">
-                          Valuation at IPO
+                          Top 5 Investors{" "}
                         </p>
-                        {valuationAtIpo ? (
+
+                        {top5Investors ? (
                           <h6>
-                            <span className="badge fw-bold">
-                              {valuationAtIpo}
+                            <span className="text-black fw-bold">
+                              {top5Investors}
                             </span>
                           </h6>
                         ) : (
                           <Unknown />
                         )}
+                        {/*     <img
+                            src="../../apilandscape_investors__60x45.png"
+                            alt=""
+                            className="md-icon my-1 px-2 align-self-center"
+                          /> */}
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="col-md-12">
+                    <div className="bg-white d-flex flex-column align-items-center">
+                      <div className="box-container d-flex flex-column align-items-center">
+                        <p className="text-company-color m-0 px-2 sm-text ">
+                          Headcount
+                        </p>
+                        {headcount ? (
+                          <h6 className="fw-bold my-2 px-2">{headcount}</h6>
+                        ) : (
+                          <Unknown />
+                        )}
                         <img
-                          src="../../apilandscape_valuation_at_IPO_60x45.png"
+                          src="../../apilandscape_headcount_80x50_companies card.png"
                           alt=""
-                          className="md-icon my-1 px-2 align-self-center"
+                          className="xd-icon my-1 px-2"
                         />
                       </div>
                     </div>
                   </div>
-                  {/* row */}
-                  <div className="update-company d-flex justify-content-center bg-gray my-5">
-                    <a
-                      href="https://platformable.typeform.com/to/KDwe0Tbk"
-                      target="_blank"
-                      className="btn btn-light-gray mx-0"
-                    >
-                      Update company info
-                    </a>
-                    {/* <span className="text-sm text-gray">Wrong info? suggest </span> */}
+
+                  <div className="col-md-12">
+                    <div className="bg-white d-flex flex-column align-items-center">
+                      <div className="box-container d-flex flex-column align-items-center">
+                      <p className="text-company-color m-0 px-2 sm-text">
+                          Diversity Score
+                        </p>
+                        <h6 className="fw-bold my-2 px-2">
+                          {handleScore(
+                            womanInManagement,
+                            nonWhitePeopleInManagement
+                          )}
+                        </h6>
+                        <img
+                          src="../../apilandscape_diversity_spot_80x50.png"
+                          alt=""
+                          className="xd-icon my-1 px-2"
+                        />
+                      </div>
+                    </div>
                   </div>
+
+                  <div className="col-md-12">
+                    <div className="bg-white d-flex flex-column align-items-center">
+                      <div className="box-container d-flex flex-column align-items-center">
+                      <p className="text-company-color m-0 px-2 sm-text">
+                          Women in management?
+                        </p>
+                        {womanInManagement ? (
+                          <h6 className="fw-bold my-2 px-2">
+                            {womanInManagement}
+                          </h6>
+                        ) : (
+                          <Unknown />
+                        )}
+                        <img
+                          src="../../apilandscape__women_in_management_50x55.png"
+                          alt=""
+                          className="sd-icon my-1 px-2"
+                        />
+                      </div>
+                    </div>
+                  </div>
+
+
+                  <div className="col-md-12">
+                    <div className="bg-white d-flex flex-column align-items-center">
+                      <div className="box-container d-flex flex-column align-items-center">
+                      <p className="text-company-color m-0 px-2 sm-text">
+                          Diverse management?
+                        </p>
+                        {nonWhitePeopleInManagement ? (
+                          <h6 className="fw-bold my-2 px-2">
+                            {nonWhitePeopleInManagement}
+                          </h6>
+                        ) : (
+                          <Unknown />
+                        )}
+                        <img
+                          src="../../apilandscape__diverse_management_50x55.png"
+                          alt=""
+                          className="sd-icon my-1 px-2"
+                        />
+                      </div>
+                    </div>
+                  </div>
+
+
+                  <div className="col-md-12">
+                    <div className="bg-white d-flex flex-column align-items-center">
+                      <div className="box-container d-flex flex-column align-items-center">
+                      <p className="text-company-color m-0 px-2 sm-text">
+                          Number of vacancies
+                        </p>
+
+                        <div className="chart p-2">
+                          {" "}
+                          <BarChart
+                            positionsPastYear={
+                              numberOfPositionsVacantInPastYear
+                            }
+                            positionThisYearq1={numberOfPositionsVacantIn2022}
+                          />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+
+                  <div className="col-md-12">
+                    <div className="bg-white d-flex flex-column align-items-center">
+                      <div className="box-container d-flex flex-column align-items-center">
+                      <p className="text-company-color m-0 px-2 sm-text">
+                      Number of Customers
+                    </p>
+
+                    {numbersOfCustomers ? (
+                      <h6 className="fw-bold px-2 pt-2">
+                        {" "}
+                        {reduceThounsand(numbersOfCustomers)}{" "}
+                      </h6>
+                    ) : (
+                      <h6 className="fw-bold my-2 px-2"> - </h6>
+                    )}
+                    <img
+                      src="../../apilandscape__number_of_customers_50x60.png"
+                      alt=""
+                      className="md-icon my-1 px-2"
+                    />
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="col-md-12">
+                    <div className="bg-white d-flex flex-column align-items-center">
+                      <div className="box-container d-flex flex-column align-items-center">
+                      <div className="known-partnership-container d-flex ">
+                      <img
+                        src="../../apilandscape__known_partnerships_API_45x45.png"
+                        alt=""
+                        className="md-icon my-1 px-2 align-self-center"
+                      />
+                      <p className="text-company-color m-0 px-2 sm-text">
+                        Known partnerships <br />
+                        (API industry)
+                      </p>
+                    </div>
+                    <div className="known-partnership-logo d-flex flex-wrap align-items-center ">
+                      {logoApiIndustry ? (
+                        logoApiIndustry.split(",").map((logo, index) => {
+                          return (
+                            <div className="partnertship-logo">
+                              <img
+                                src={handleImages(logo)}
+                                className="img-fluid me-1"
+                              />
+                            </div>
+                          );
+                        })
+                      ) : (
+                        <Unknown />
+                      )}
+                    </div>{" "}
+                    {/* known-partnership-logo */}
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="col-md-12">
+                    <div className="bg-white d-flex flex-column align-items-center">
+                      <div className="box-container d-flex flex-column align-items-center">
+                      <div className="known-partnership-container d-flex ">
+                      <img
+                        src="../../apilandscape__known_partnerships_no_API_45x45.png"
+                        alt=""
+                        className="md-icon my-1 px-2 align-self-center"
+                      />
+                      <p className="text-company-color m-0 px-2 sm-text">
+                        Known partnerships <br />
+                        (Non-API industry)
+                      </p>
+                    </div>
+                    <div className="known-partnership-logo  text-center flex-grow-1 ">
+                      {knownPartnershipsNonApi ? (
+                        knownPartnershipsNonApi
+                          .split(",")
+                          .map((partner, index) => {
+                            return (
+                              <>
+                                <p className="sm-text my-2 fw-bold me-1">
+                                  {partner}
+                                </p>
+                              </>
+                            );
+                          })
+                      ) : (
+                        <Unknown />
+                      )}
+                    </div>{" "}
+                    {/* known-partnership-logo */}
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="col-md-12">
+                  <section className="company-profile-right-one ">
+                <div className="profile-right-side-top-top bg-white border-bottom-company-color  d-flex flex-column align-items-center px-2 ">
+                  <div className="me-3 pb-2 ">
+                    <p className="text-company-color sm-text">
+                      Known industries <br />
+                      working in
+                    </p>
+                    {/* <img src="../../apilandscape__known industries working in_80x50.png" alt="" className="md-icon"/> */}
+                  </div>{" "}
+                  {/* div */}
+                  <div className="">
+                    {industryGroups
+                      ? industryGroups.split(",").map((industry, index) => {
+                          return (
+                            <>
+                              <span
+                                className={`badge text-black me-1 ${handleColors()}`}
+                              >
+                                {industry}
+                              </span>
+                            </>
+                          );
+                        })
+                      : <Unknown/>}
+                  </div>{" "}
+                  {/* div known-industries*/}
                 </div>
-                {/* profile-right-side */}
+                {/* profile-right-side-top-top */}
+              </section>{" "}  
+                  </div>
+
+                  <div className="col-md-12">
+                    <div className="bg-white d-flex flex-column align-items-center">
+                      <div className="box-container d-flex flex-column align-items-center">
+                      <p className="text-company-color sm-text m-0">
+                            Banking/Finance
+                          </p>
+                          {pageAboutBanking ? (
+                            <a href="" className="m-0 p-0 sm-text">
+                              {pageAboutBanking}
+                            </a>
+                          ) : (
+                            <Unknown />
+                          )}
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="col-md-12">
+                    <div className="bg-white d-flex flex-column align-items-center">
+                      <div className="box-container d-flex flex-column align-items-center">
+                      <p className="text-company-color sm-text m-0">
+                           Health Sector
+                          </p>
+                          {pageAboutHealth ? (
+                            <a href="" className="m-0 p-0 sm-text">
+                              {pageAboutHealth}
+                            </a>
+                          ) : (
+                            <Unknown />
+                          )}
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="col-md-12">
+                    <div className="bg-white d-flex flex-column align-items-center">
+                      <div className="box-container d-flex flex-column align-items-center">
+                      <p className="text-company-color sm-text m-0">
+                          Sustainability
+                          </p>
+                          {pageAboutSustainability ? (
+                            <a href="" className="m-0 p-0 sm-text">
+                              {pageAboutSustainability}
+                            </a>
+                          ) : (
+                            <Unknown />
+                          )}
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="col-md-12">
+                    <div className="bg-white d-flex flex-column align-items-center">
+                      <div className="box-container d-flex flex-column align-items-center">
+                      <p className="text-company-color sm-text m-0">
+                          Government
+                          </p>
+                          {pageAboutGovernment ? (
+                            <a href="" className="m-0 p-0 sm-text">
+                              {pageAboutGovernment}
+                            </a>
+                          ) : (
+                            <Unknown />
+                          )}
+                      </div>
+                    </div>
+                  </div>
+
+                  
+
+              
+
+
+
+           
+
+                  
+                </div>
               </div>
             </div>
           </div>
@@ -1329,7 +966,7 @@ export default function CompanyDetailsName({ data }) {
       </section>
       <div className="container mt-5 d-none d-md-block">
         <div className="company-profile-container bg-company-color">
-          <div className="company-profile-left-column bg-white   px-5 py-1">
+          <div className="company-profile-left-column bg-white   px-5 pt-1">
             <div className="company-logo d-flex justify-content-center align-items-center my-2">
               <a href={url} target="_blank">
                 {logo === "" || null ? (
@@ -1353,11 +990,7 @@ export default function CompanyDetailsName({ data }) {
                 {name}
               </h3>
             </div>{" "}
-            {/* company name */}
-            {/* <div className="company-url d-flex justify-content-center align-items-center">
-             <a href={url} target="_blank">{url}</a>
-           </div> */}{" "}
-            {/* company url */}
+
             <div className="company-category mt-2 mb-2">
               {newParentCategorySlug?.map((category, index) => {
                 return (
@@ -1506,7 +1139,7 @@ export default function CompanyDetailsName({ data }) {
                     <p className="sm-text mt-1 ml-2">Founded in</p>
                   </div>
                   <div className="year">
-                    <p className="fw-bold mx-1">{yearFounded}</p>
+                    <p className="fw-bold mx-1 sm-text mt-1 sm-text">{yearFounded}</p>
                   </div>
                 </div>
                 {/*  founded top left */}
@@ -1523,7 +1156,7 @@ export default function CompanyDetailsName({ data }) {
                     <p className="sm-text mt-1 ml-2">Founder(s)</p>
                   </div>
                   <div className="year ">
-                    <p className="fw-bold mx-1">{founderNames}</p>
+                    <p className="fw-bold mx-1 sm-text mt-1 sm-text">{founderNames}</p>
                   </div>
                 </div>
                 {/*  founded top left */}
@@ -1538,10 +1171,10 @@ export default function CompanyDetailsName({ data }) {
                   </div>{" "}
                   {/* icon */}
                   <div className="foundedIn-text ml-2">
-                    <p className="sm-text mt-2 ml-2">Headquarter</p>
+                    <p className="sm-text mt-2 ml-2">Headquarters</p>
                   </div>
                   <div className="year ">
-                    <p className="fw-bold mx-1 mt-1">
+                    <p className="fw-bold mx-1 mt-2 sm-text">
                       {headquartersCity}, {headquartersCountry}
                     </p>
                   </div>
@@ -1618,11 +1251,12 @@ export default function CompanyDetailsName({ data }) {
               </ul>
             </div>{" "}
             {/* company-socials-url */}
-            <div className="update-company d-flex justify-content-center pt-3">
+            <div className="update-company mb-2 pt-3">
+              
               <a
                 href="https://platformable.typeform.com/to/KDwe0Tbk"
                 target="_blank"
-                className="btn bg-company-color text-white mx-0"
+                className="px-2 rounded py-1 text-white mb-2 bg-dark-main-color mx-0"
               >
                 Update company data
               </a>
@@ -1636,10 +1270,10 @@ export default function CompanyDetailsName({ data }) {
           <div className="company-profile-right-column ml-5 ">
             {/* DETAILS */} {/* DETAILS */} {/* DETAILS */}
             <section>
-              <section className="company-profile-right-side-section5 mb-1 d-flex bg-white ">
+              <section className="company-profile-right-side-section5 mb-2 d-flex bg-white ">
                 <div className="company-profile-right-side-section5-right d-flex">
                   <div className="section5-right-top d-flex">
-                    <div className="section5-box flex-grow-1 border-end-company-color p-2">
+                    <div className="section5-box flex-grow-1 border-end-company-color px-2 ">
                       <div className="box-container d-flex flex-column align-items-center">
                         <p className="text-company-color m-0 px-2 sm-text mb-3">
                           Stage (Seed, A, B, C)
@@ -1652,7 +1286,7 @@ export default function CompanyDetailsName({ data }) {
                       </div>
                     </div>{" "}
                     {/* section5 box */}
-                    <div className="section5-box flex-grow-1 border-end-company-color p-2">
+                    <div className="section5-box flex-grow-1 border-end-company-color px-2 ">
                       <div className="box-container d-flex flex-column align-items-center">
                         <p className="text-company-color m-0 px-2 sm-text mb-3">
                           Total Funding
@@ -1674,7 +1308,7 @@ export default function CompanyDetailsName({ data }) {
                       </div>
                     </div>{" "}
                     {/* section5 box */}
-                    <div className="section5-box flex-grow-1 border-end-company-color p-2">
+                    <div className="section5-box flex-grow-1 border-end-company-color px-2">
                       <div className="box-container d-flex flex-column align-items-center">
                         <p className="text-company-color m-0 px-2 sm-text mb-3 ">
                           Last funding
@@ -1697,7 +1331,7 @@ export default function CompanyDetailsName({ data }) {
                       </div>
                     </div>{" "}
                     {/* section5 box */}
-                    <div className="section5-box flex-grow-1 border-end-company-color p-2">
+                    <div className="section5-box flex-grow-1 border-end-company-color px-2 ">
                       <div className="box-container d-flex flex-column align-items-center">
                         <p className="text-company-color m-0 px-2 sm-text">
                           Investors{" "}
@@ -1720,7 +1354,7 @@ export default function CompanyDetailsName({ data }) {
                       </div>
                     </div>{" "}
                     {/* section5 box */}
-                    <div className="company-profile-right-side-section5-left flex-grow-1  p-2 ">
+                    <div className="company-profile-right-side-section5-left flex-grow-1  px-2">
                       <div className="new-product-features-top d-flex">
                         <img
                           src="../../apilandscape_top_5_investors__60x45.png"
@@ -1734,7 +1368,15 @@ export default function CompanyDetailsName({ data }) {
                       {/* features-top */}
                       <div className="px-2">
                         <p className="sm-text mt-2">
-                          <Unknown />
+                          {top5Investors ? (
+                            <h6>
+                              <span className="text-black fw-bold">
+                                {top5Investors}
+                              </span>
+                            </h6>
+                          ) : (
+                            <Unknown />
+                          )}
                         </p>
                       </div>
                     </div>{" "}
@@ -1744,7 +1386,7 @@ export default function CompanyDetailsName({ data }) {
                 </div>{" "}
                 {/* company-profile-right-side-section5-right */}
               </section>
-              <section className="company-profile-right-side-section2 bg-white mb-1 d-flex flex-wrap">
+              <section className="company-profile-right-side-section2 bg-white mb-2 d-flex flex-wrap">
                 <div className="company-profile-right-side-section2-left headcount d-flex flex-column align-items-center border-top-company-color  border-end-company-color flex-grow-1">
                   <p className="text-company-color m-0 px-2 sm-text ">
                     Headcount
@@ -1830,7 +1472,7 @@ export default function CompanyDetailsName({ data }) {
                 </div>
               </section>{" "}
               {/* company-profile-right-side-section2 */}
-              <section className="company-profile-right-one bg-white mb-1">
+              <section className="company-profile-right-one bg-white mb-2">
                 <div className="company-profile-right-one-bottom d-flex">
                   <div className="number-of-customers d-flex flex-column align-items-center border-top border-end-company-color">
                     <p className="text-company-color m-0 px-2 sm-text">
@@ -1918,8 +1560,8 @@ export default function CompanyDetailsName({ data }) {
                 </div>{" "}
                 {/* company-profile-right-one-bottom */}
               </section>
-              <section className="company-profile-right-one bg-white mb-1">
-                <div className="profile-right-side-top-top  border-bottom-company-color  d-flex pt-2 px-2 ">
+              <section className="company-profile-right-one bg-white mb-2">
+                <div className="profile-right-side-top-top  border-bottom-company-color  d-flex  px-2 ">
                   <div className="me-3 pb-2 ">
                     <p className="text-company-color sm-text">
                       Known industries <br />
@@ -1948,7 +1590,7 @@ export default function CompanyDetailsName({ data }) {
                 {/* profile-right-side-top-top */}
               </section>{" "}
               {/* company-profile-right-one */}
-              <section className="company-profile-right-one bg-white pb-5">
+              <section className="company-profile-right-one bg-white pb-1">
                 <div className="company-profile-right-one-top-right">
                   <div className="profile-right-side-top-bottom content-addressing  ">
                     <p className="text-company-color sm-text ms-2">
