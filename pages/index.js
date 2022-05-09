@@ -48,11 +48,14 @@ export default function Homepage({ data }) {
 
 
 const categories = [
+  "DevRegOps & Privacy Engineering Tools",
   "Data Lifecycle and Data Governance",
   "Privacy Workflow and Management",
   "Security for Privacy",
   "Data intermediaries",
   "Consumer Facing Data Privacy Solutions",
+  "Data organizations",
+
 ];
 
 const subcategories = [
@@ -112,6 +115,32 @@ shadowBlur: 5
     })
   }
 
+  // Data organizations
+
+  const DataOrganizationsDescription="Organizations with a role to progress data privacy and protection in some way";
+
+   const DataOrganizations = data.values.filter(
+    (company, index) =>
+      company?.parentCategorySlug?.includes(
+        "Data organizations")
+  );
+
+  console.log("DataOrganizations",DataOrganizations)
+
+  const  DataOrganizationsANDIndependent =  data.values.filter(
+    (company, index) =>
+      company?.parentCategorySlug?.includes(
+        "Data organizations") &&
+      company?.subcategory?.includes("Indepedent data privacy-related organizations") 
+  ).sort((a, b) => a.name.localeCompare(b.name))
+
+  const  DataOrganizationsANDDataProtection =  data.values.filter(
+    (company, index) =>
+      company?.parentCategorySlug?.includes(
+        "Data organizations") &&
+      company?.subcategory?.includes("Data protection authorities") 
+  ).sort((a, b) => a.name.localeCompare(b.name))
+
 // DEVS REG OPS
 
 const DevRegOpsPrivacyEngineeringToolsDescription="Tools that enable privacy regulations and oversight to be embedded into, and translate privacy policy into Infrastructure-as-Code"
@@ -121,7 +150,7 @@ const DevRegOpsPrivacyEngineeringToolsDescription="Tools that enable privacy reg
       company?.parentCategorySlug?.includes(
         "DevRegOps & Privacy Engineering Tools")
   );
-  {console.log("DevRegOpsPrivacyEngineeringTools",DevRegOpsPrivacyEngineeringTools)}
+
   const  DevRegOpsPrivacyEngineeringToolsANDDevRegOps =  data.values.filter(
     (company, index) =>
       company?.parentCategorySlug?.includes(
@@ -228,7 +257,7 @@ const DevRegOpsPrivacyEngineeringToolsDescription="Tools that enable privacy reg
           "Security for Privacy")
     );
   
-    {console.log("SecurityforPrivacy",SecurityforPrivacy.length)}
+
     const  SecurityforPrivacyANDIncidentResponse =  data.values.filter(
       (company, index) =>
         company?.parentCategorySlug?.includes(
@@ -1180,6 +1209,53 @@ const DevRegOpsPrivacyEngineeringToolsDescription="Tools that enable privacy reg
                               handleCompany={handleEntity}
                               filteredCategory={
                                 ConsumerFacingDataPrivacySolutionsANDConsumerFacingDataPrivacySolutions
+                              }
+                            />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+
+                <div className="col-md-12 mb-1">
+                  <div className="home-main-container ">
+                    <div className="bg-dark-company-color">
+                      <span
+                        className="text-white"
+                        data-tip={DataOrganizationsDescription}
+                        data-for="category-tooltip"
+                      >
+                        Data organizations (
+                        {DataOrganizations.length})
+                      </span>
+                    </div>
+                    <div class="category-container">
+                    <div class="landscape-container">
+                        <div class="landscape-category-container">
+                          <div class="landscape-subcategory-box landscape-subcategory-box-apilifecycleplatform">
+                            {data <= 0 && <Loader />}
+
+                            <HomepageSubcategory
+                              subcategoryName="Indepedent data privacy-related organizations"
+                              handleCompany={handleEntity}
+                              filteredCategory={
+                                DataOrganizationsANDIndependent
+                              }
+                            />
+                          </div>
+                        </div>
+                      </div>
+                      <div class="landscape-container">
+                        <div class="landscape-category-container">
+                          <div class="landscape-subcategory-box landscape-subcategory-box-apilifecycleplatform">
+                            {data <= 0 && <Loader />}
+                            <HomepageSubcategory
+                              subcategoryName="Data protection authorities"
+                              handleCompany={handleEntity}
+                              filteredCategory={
+                                DataOrganizationsANDDataProtection
                               }
                             />
                           </div>

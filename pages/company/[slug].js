@@ -101,7 +101,7 @@ export default function CompanyDetailsName({ data }) {
   };
   const selectedCompany =
     data.values.filter((company) => company.name === slug) || "";
-  console.log("selectedCompany: ", selectedCompany);
+
   const {
     name,
     logo,
@@ -263,6 +263,7 @@ export default function CompanyDetailsName({ data }) {
                     category === "Consumer Facing Data Privacy Solutions" &&
                     "bg-main-color2 text-white"
                   }
+                  ${category==="Data organizations" && "bg-main-color1 text-white"}
                   `}
                       >
                         {category}
@@ -335,6 +336,8 @@ export default function CompanyDetailsName({ data }) {
               ${subcat === "Other Security Tools" && "bg-main-color-2-light"}
 
               ${subcat === "Data Institutions" && "bg-main-color-1-light"}
+              ${subcat === "Indepedent data privacy-related organizations" && "bg-main-color-1-light"}
+              ${subcat === "Data protection authorities" && "bg-main-color-1-light"}
               ${
                 subcat === "Centralised Consent Platforms" &&
                 "bg-main-color-1-light"
@@ -1017,6 +1020,10 @@ export default function CompanyDetailsName({ data }) {
                     "bg-main-color1 text-white"
                   }
                   ${
+                    category === "Data organizations" &&
+                    "bg-main-color1 text-white"
+                  }
+                  ${
                     category === "Consumer Facing Data Privacy Solutions" &&
                     "bg-main-color2 text-white"
                   }
@@ -1101,6 +1108,9 @@ export default function CompanyDetailsName({ data }) {
                 subcat === "Consumer Facing Data Privacy Solutions" &&
                 "bg-main-color-1-light"
               }
+
+              ${subcat === "Indepedent data privacy-related organizations" && "bg-main-color-1-light"}
+              ${subcat === "Data protection authorities" && "bg-main-color-1-light"}
            
               `}
                   >

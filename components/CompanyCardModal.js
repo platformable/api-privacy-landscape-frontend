@@ -114,6 +114,7 @@ export default function CompanyCardModal({company,index,loading}) {
                   ${category==="Security for Privacy" && "bg-main-color2 text-white text-white"}
                   ${category==="Data intermediaries" && "bg-main-color1 text-white"}
                   ${category==="Consumer Facing Data Privacy Solutions" && "bg-main-color2 text-white"}
+                  ${category==="Data organizations" && "bg-main-color1 text-white"}
           
                   `}>{category}</span>)
                 })}
