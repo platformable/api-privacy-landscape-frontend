@@ -471,27 +471,27 @@ const DevRegOpsPrivacyEngineeringToolsDescription="Tools that enable privacy reg
                   Share
                 </h3>
                 <LinkedinShareButton
-                  url="https://apilandscape.platformable.com/"
-                  title="The API Landscape"
-                  source="https://apilandscape.platformable.com/"
+                  url="https://privacylandscape.platformable.com/"
+                  title="The API Privacy Landscape"
+                  source="https://privacylandscape.platformable.com/"
                   summary="The API Landscape"
                 >
                   <LinkedinIcon size={32} round={true} />
                 </LinkedinShareButton>
                 <TwitterShareButton
-                  title="The API Landscape"
-                  url="https://apilandscape.platformable.com"
-                  via="http://apidays.global"
-                  hashtags={["api", "landscape"]}
+                  title="Have a look at these privacy technology tools and open source projects: https://privacylandscape.platformable.com/"
+                  url="https://privacylandscape.platformable.com/"
+                  via="http://alias.dev"
+                  hashtags={["api", "landscape","privacy","alias"]}
                 >
                   <TwitterIcon size={32} round={true} />
                 </TwitterShareButton>
                 <EmailShareButton
                   url=""
-                  title="The API Landscape"
-                  subject="The API Landscape from apidays"
+                  title="The API Privacy Landscape"
+                  subject="Have a look at this privacy tech landscape"
                   separator=" "
-                  body="Get to know more about the API Landscape, visit http://apilandscape.com"
+                  body="A comprehensive view of all privacy technology tools and open source projects by ALIAS (https://privacylandscape.platformable.com/)"
                 >
                   <EmailIcon size={32} round={true} />
                 </EmailShareButton>
