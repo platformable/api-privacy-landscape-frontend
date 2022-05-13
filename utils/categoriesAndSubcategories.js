@@ -95,7 +95,7 @@ export const subcategoriesDescriptions = {
     "Data Institutions":[{"description":"Data institutions are organisations whose purpose involves stewarding data on behalf of others"}],
     "Centralised Consent Platforms":[{"description":"Centralized consent platforms aggregate consumer consent preferences"}],
     "Consumer Facing Data Privacy Solutions":[{"description":"Consumer facing data privacy solutions privacy tech products including data wallets, DSAR agents, anti-trackers, online pseudonyms, and privacy-first online services"}],
-    "Indepedent data privacy-related organizations":[{"description":"Think tanks, research bodies, community advocates and others focused on supporting data privacy and data protection"}],
+    "Independent data privacy-related organizations":[{"description":"Think tanks, research bodies, community advocates and others focused on supporting data privacy and data protection"}],
     "Data protection authorities":[{"description":"National regulators with responsibility for overseeing data privacy and data protection compliance"}],
     
   }

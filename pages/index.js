@@ -415,7 +415,7 @@ const DevRegOpsPrivacyEngineeringToolsDescription="Tools that enable privacy reg
                 <button
                   className="btn btn-dark-gray me-1 text-white mb-1"
                   onClick={() =>
-                    handleForm("https://airtable.com/shr07pWSbRnQfnZZd")
+                    handleForm("https://airtable.com/shr8wQgbfheqbRKI6")
                   }
                 >
                   Add your API Tool
@@ -426,27 +426,28 @@ const DevRegOpsPrivacyEngineeringToolsDescription="Tools that enable privacy reg
                 >
                   Search
                 </button>
-                <a
+               {/*  <a
                   className="btn btn-dark-gray me-1 text-white"
                   href="../apilandscape.png"
                   download="apilandscape"
                 >
                   Download the map
-                </a>
+                </a> */}
                 <button
-                  className="btn btn-light-gray   text-company-color "
+                  className="btn btn-light-gray   ms-1 mb-1 text-company-color "
                   onClick={() => handleLinks("zoom")}
                 >
                   Zoom
                 </button>
                 {/* <a className="btn btn-dark-gray  text-white" href="https://drive.google.com/u/0/uc?id=1J2DdAB54QU6QuPoACqQoNv4nImFjyAdx&export=download"  download="stateofthemarket2022">Report</a> */}
-                <a
-                  className="btn btn-dark-gray  text-white"
-                  href="https://apidays.typeform.com/to/YMTfJ3"
+                <button className="btn btn-dark-gray ms-1 mb-1 text-white"><a
+                  className="text-white"
+                  href="https://www.alias.dev/"
                   target="_blank"
                 >
-                  Report
+                  Find out more
                 </a>
+                </button>
                 {/*      <div className="row">
             <div className="col-md-4"> </div>
               <div className="col-md-4">
@@ -1238,7 +1239,7 @@ const DevRegOpsPrivacyEngineeringToolsDescription="Tools that enable privacy reg
                             {data <= 0 && <Loader />}
 
                             <HomepageSubcategory
-                              subcategoryName="Indepedent data privacy-related organizations"
+                              subcategoryName="Independent data privacy-related organizations"
                               handleCompany={handleEntity}
                               filteredCategory={
                                 DataOrganizationsANDIndependent
@@ -1284,7 +1285,8 @@ const DevRegOpsPrivacyEngineeringToolsDescription="Tools that enable privacy reg
                       className="d-block align-self-start mb-2 xd-icon"
                     />
                   </div>
-                    <button className="btn-about bg-dark-orange text-white mt-1" onClick={()=>handleForm("https://airtable.com/shr07pWSbRnQfnZZd")}>Add your API tool</button>
+                    <button className="btn-about bg-dark-orange text-white mt-1" 
+                    onClick={()=>handleForm("https://airtable.com/shr8wQgbfheqbRKI6")}>Add your API tool</button>
                     </div>
 
                     <div className="change-box  px-5">
@@ -1299,7 +1301,7 @@ const DevRegOpsPrivacyEngineeringToolsDescription="Tools that enable privacy reg
                     <p className="pt-1 text-company-color">Report a bug including problems with the website or with the data for a specific tool provider</p>
                     </div>
                     <div className="text-center d-flex flex-grow-1 mt-3">
-                    <button className="btn-about bg-dark-orange text-white" onClick={()=>handleForm("https://platformable.typeform.com/to/iqJrv9LJ")}>Report a bug</button>
+                    <button className="btn-about bg-dark-orange text-white" onClick={()=>handleForm("https://platformable.typeform.com/to/fcJHb1xJ")}>Report a bug</button>
                     </div>
                     </div>
 
@@ -1316,7 +1318,7 @@ const DevRegOpsPrivacyEngineeringToolsDescription="Tools that enable privacy reg
                     <p className="pt-1 text-company-color">Share a new feature idea, including any additional data points you would like to see </p>
                     </div>
                     <div className="text-center d-flex flex-grow-1 mt-3">
-                    <button className="btn-about bg-dark-orange text-white" onClick={()=>handleForm("https://platformable.typeform.com/to/hSprzih3")}>New feature idea</button>
+                    <button className="btn-about bg-dark-orange text-white" onClick={()=>handleForm("https://platformable.typeform.com/to/z4zEIFFC")}>New feature idea</button>
                     </div>
                     </div>
                 </div>
