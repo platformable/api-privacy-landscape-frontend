@@ -459,7 +459,7 @@ const DevRegOpsPrivacyEngineeringToolsDescription="Tools that enable privacy reg
                   <LinkedinIcon size={32} round={true} />
                 </LinkedinShareButton>
                 <TwitterShareButton
-                  title="Have a look at these privacy technology tools and open source projects: https://privacylandscape.platformable.com/"
+                  title="Have a look at these privacy technology tools and open source projects:"
                   url="https://privacylandscape.platformable.com/"
                   via="http://alias.dev"
                   hashtags={["api", "landscape","privacy","alias","tech"]}
