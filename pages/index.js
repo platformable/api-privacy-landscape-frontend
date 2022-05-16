@@ -355,26 +355,6 @@ const DevRegOpsPrivacyEngineeringToolsDescription="Tools that enable privacy reg
 
   const totalValues = data.values.filter(items=>items.parentCategorySlug !=="API Standards/Protocols" && items.parentCategorySlug !=="Media/Associations")
  
-/*   const [searchResult,setSearchResult]=useState(false) */
-
-/*   const handleSearchMessage=()=>{
-    setSearchResult(true)
-    setTimeout(()=>setSearchResult(false),3000)
-  }
-
-  const handleFoundCompany = (company)=>{
-    setLoading(!loading)
-    router.push(`/company/${company}`)
-  } */
-
-  /* const handleSearch = ()=>{
-
-    if(company.searchInput!==""){
-    
-   const result =  data.values.filter((item, index) => item.name.toLowerCase()===company.searchInput);
-   result.length===0 ? handleSearchMessage() :handleFoundCompany(result[0].name);
-  } 
-  } */
   
 
   return (
@@ -418,7 +398,7 @@ const DevRegOpsPrivacyEngineeringToolsDescription="Tools that enable privacy reg
                     handleForm("https://airtable.com/shr8wQgbfheqbRKI6")
                   }
                 >
-                  Add your API Tool
+                  Add your tool
                 </button>
                 <button
                   className="btn btn-light-gray  m-0 text-company-color mb-1"
@@ -472,9 +452,9 @@ const DevRegOpsPrivacyEngineeringToolsDescription="Tools that enable privacy reg
                 </h3>
                 <LinkedinShareButton
                   url="https://privacylandscape.platformable.com/"
-                  title="The API Privacy Landscape"
+                  title="The API Privacy Tech Landscape"
                   source="https://privacylandscape.platformable.com/"
-                  summary="The API Landscape"
+                  summary="The API Privacy Tech Landscape"
                 >
                   <LinkedinIcon size={32} round={true} />
                 </LinkedinShareButton>
@@ -482,13 +462,13 @@ const DevRegOpsPrivacyEngineeringToolsDescription="Tools that enable privacy reg
                   title="Have a look at these privacy technology tools and open source projects: https://privacylandscape.platformable.com/"
                   url="https://privacylandscape.platformable.com/"
                   via="http://alias.dev"
-                  hashtags={["api", "landscape","privacy","alias"]}
+                  hashtags={["api", "landscape","privacy","alias","tech"]}
                 >
                   <TwitterIcon size={32} round={true} />
                 </TwitterShareButton>
                 <EmailShareButton
                   url=""
-                  title="The API Privacy Landscape"
+                  title="The API Privacy Tech Landscape"
                   subject="Have a look at this privacy tech landscape"
                   separator=" "
                   body="A comprehensive view of all privacy technology tools and open source projects by ALIAS (https://privacylandscape.platformable.com/)"
@@ -1286,7 +1266,7 @@ const DevRegOpsPrivacyEngineeringToolsDescription="Tools that enable privacy reg
                     />
                   </div>
                     <button className="btn-about bg-dark-orange text-white mt-1" 
-                    onClick={()=>handleForm("https://airtable.com/shr8wQgbfheqbRKI6")}>Add your API tool</button>
+                    onClick={()=>handleForm("https://airtable.com/shr8wQgbfheqbRKI6")}>Add your tool</button>
                     </div>
 
                     <div className="change-box  px-5">
