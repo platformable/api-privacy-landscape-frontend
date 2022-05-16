@@ -128,7 +128,7 @@ const total = liveData.filter(items=>items.parentCategorySlug !=="API Standards/
     return (
         <Layout>
             <Head>
-          <title>Security Landscape - Companies</title>
+          <title>Privacy Tech Landscape - Companies</title>
           <meta name="description" content="apidays landscape companies" />
         </Head>
         {loading && <TopBarProgress />}

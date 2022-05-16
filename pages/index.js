@@ -370,12 +370,12 @@ const DevRegOpsPrivacyEngineeringToolsDescription="Tools that enable privacy reg
           <meta name="twitter:card" content="summary_large_image" />
           <meta property="og:description" content="Privacy Tech Landscape" />
           <meta property="og:title" content="Privacy Tech Landscape" />
-          <meta property="og:image" content="../landscape_social_map.png" />
+          <meta property="og:image" content="../privacy_tech_social.png" />
           <meta name="twitter:card" content="summary_large_image" />
           <meta name="twitter:site" content="@APIdaysGlobal" />
           <meta name="twitter:title" content="apidays" />
           <meta name="twitter:description" content="apidays" />
-          <meta name="twitter:image" content="../landscape_social_map.png" />
+          <meta name="twitter:image" content="../privacy_tech_social.png" />
         </Head>
 
         <main>

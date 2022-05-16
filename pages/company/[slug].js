@@ -196,7 +196,7 @@ export default function CompanyDetailsName({ data }) {
   return (
     <Layout>
       <Head>
-        <title>security landscape - {slug} </title>
+        <title>Privacy Tech Landscape - {slug} </title>
         <meta name="description" content="apidays landscape" />
       </Head>
       {/* // START MOBILE */}
@@ -499,11 +499,11 @@ export default function CompanyDetailsName({ data }) {
                 <div className="update-company px-0 mx-0 my-2">
                 
                   <a
-                    href="https://platformable.typeform.com/to/KDwe0Tbk"
+                    href="https://platformable.typeform.com/to/ldOvyONS"
                     target="_blank"
                     className="bg-dark-main-color rounded py-1 text-white mx-0 my-5 px-2"
                   >
-                    Update company datax
+                    Update company data
                   </a>
                   {/* <span className="text-sm text-gray">Wrong info? suggest </span> */}
                 </div>
@@ -1264,7 +1264,7 @@ export default function CompanyDetailsName({ data }) {
             <div className="update-company mb-2 pt-3">
               
               <a
-                href="https://platformable.typeform.com/to/KDwe0Tbk"
+                href="https://platformable.typeform.com/to/ldOvyONS"
                 target="_blank"
                 className="px-2 rounded py-1 text-white mb-2 bg-dark-main-color mx-0"
               >
