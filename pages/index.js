@@ -383,6 +383,7 @@ const DevRegOpsPrivacyEngineeringToolsDescription="Tools that enable privacy reg
             <div className="container hero  d-flex justify-content-center  align-items-center">
               {/* <Link className="navbar-brand" href="/"><img src="../homepage/logo_temporary_apilandscape.png" alt="apidays" className="home-logo align-self-start" /></Link> */}
               <div className="text-center flex-grow-1">
+                <img src="/main-logo.png" alt="" width={120}/>
                 <h1 className="text-white text-center py-2 text-white fw-bold">
                 Privacy Tech Landscape
                 </h1>
@@ -406,13 +407,13 @@ const DevRegOpsPrivacyEngineeringToolsDescription="Tools that enable privacy reg
                 >
                   Search
                 </button>
-               {/*  <a
-                  className="btn btn-dark-gray me-1 text-white"
-                  href="../apilandscape.png"
-                  download="apilandscape"
+                <a
+                  className="btn btn-dark-gray me-1 mb-1 text-white"
+                  href="../Privacy-Tech-Landscape.png"
+                  download="Privacy-Tech-Landscape"
                 >
                   Download the map
-                </a> */}
+                </a>
                 <button
                   className="btn btn-light-gray   ms-1 mb-1 text-company-color "
                   onClick={() => handleLinks("zoom")}
@@ -860,8 +861,8 @@ const DevRegOpsPrivacyEngineeringToolsDescription="Tools that enable privacy reg
                         data-tip={DevRegOpsPrivacyEngineeringToolsDescription}
                         data-for="category-tooltip"
                       >
-                        DevRegOps & Privacy <br /> Engineering Tools (
-                        {DevRegOpsPrivacyEngineeringTools.length})
+                        DevRegOps & Privacy <br /> Engineering Tools {/* (
+                        {DevRegOpsPrivacyEngineeringTools.length}) */}
                       </span>
                     </div>
                     <div class="category-container">
@@ -903,8 +904,8 @@ const DevRegOpsPrivacyEngineeringToolsDescription="Tools that enable privacy reg
                         data-tip={DataLifecycleAndDataGovernanceDescription}
                         data-for="category-tooltip"
                       >
-                        Data Lifecycle <br /> and Data Governance (
-                        {DataLifecycleAndDataGovernance.length})
+                        Data Lifecycle <br /> and Data Governance {/* (
+                        {DataLifecycleAndDataGovernance.length}) */}
                       </span>
                     </div>
 
@@ -1006,8 +1007,8 @@ const DevRegOpsPrivacyEngineeringToolsDescription="Tools that enable privacy reg
                         data-tip={PrivacyWorkflowandManagemenDescription}
                         data-for="category-tooltip"
                       >
-                        Privacy Workflow <br /> and Management (
-                        {PrivacyWorkflowandManagement.length})
+                        Privacy Workflow <br /> and Management {/* (
+                        {PrivacyWorkflowandManagement.length}) */}
                       </span>
                     </div>
                     <div class="category-container">
@@ -1053,8 +1054,8 @@ const DevRegOpsPrivacyEngineeringToolsDescription="Tools that enable privacy reg
                         data-tip={SecurityforPrivacyDescription}
                         data-for="category-tooltip"
                       >
-                        Security for Privacy (
-                        {SecurityforPrivacy.length})
+                        Security for Privacy {/* (
+                        {SecurityforPrivacy.length}) */}
                       </span>
                     </div>
                     <div class="category-container">
@@ -1129,8 +1130,8 @@ const DevRegOpsPrivacyEngineeringToolsDescription="Tools that enable privacy reg
                         data-tip={DataintermediariesDescription}
                         data-for="category-tooltip"
                       >
-                        Data intermediaries (
-                        {Dataintermediaries.length})
+                        Data intermediaries {/* (
+                        {Dataintermediaries.length}) */}
                       </span>
                     </div>
                     <div class="category-container">
@@ -1175,8 +1176,8 @@ const DevRegOpsPrivacyEngineeringToolsDescription="Tools that enable privacy reg
                         data-tip={DevRegOpsPrivacyEngineeringToolsDescription}
                         data-for="category-tooltip"
                       >
-                        Consumer Facing Data <br /> Privacy Solutions (
-                        {DevRegOpsPrivacyEngineeringTools.length})
+                        Consumer Facing Data <br /> Privacy Solutions {/* (
+                        {DevRegOpsPrivacyEngineeringTools.length}) */}
                       </span>
                     </div>
                     <div class="category-container">
@@ -1208,8 +1209,8 @@ const DevRegOpsPrivacyEngineeringToolsDescription="Tools that enable privacy reg
                         data-tip={DataOrganizationsDescription}
                         data-for="category-tooltip"
                       >
-                        Data organizations (
-                        {DataOrganizations.length})
+                        Data organizations {/* (
+                        {DataOrganizations.length}) */}
                       </span>
                     </div>
                     <div class="category-container">
