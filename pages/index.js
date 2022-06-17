@@ -365,7 +365,7 @@ const DevRegOpsPrivacyEngineeringToolsDescription="Tools that enable privacy reg
           <title>Privacy Tech Landscape</title>
           <meta content="text/html; charset=UTF-8" name="Content-Type" />
           <meta name="description" content="Privacy Tech Landscape" />
-          <meta property="og:url" content="https://privacylandscape.platformable.com/" />
+          <meta property="og:url" content="https://privacylandscape.alias.dev/" />
           <meta property="og:type" content="website" />
           <meta name="twitter:card" content="summary_large_image" />
           <meta property="og:description" content="Privacy Tech Landscape" />
@@ -452,16 +452,16 @@ const DevRegOpsPrivacyEngineeringToolsDescription="Tools that enable privacy reg
                   Share
                 </h3>
                 <LinkedinShareButton
-                  url="https://privacylandscape.platformable.com/"
+                  url="https://privacylandscape.alias.dev/"
                   title="The API Privacy Tech Landscape"
-                  source="https://privacylandscape.platformable.com/"
+                  source="https://privacylandscape.alias.dev/"
                   summary="The API Privacy Tech Landscape"
                 >
                   <LinkedinIcon size={32} round={true} />
                 </LinkedinShareButton>
                 <TwitterShareButton
                   title="Have a look at these privacy technology tools and open source projects:"
-                  url="https://privacylandscape.platformable.com/"
+                  url="https://privacylandscape.alias.dev/"
                   via="http://alias.dev"
                   hashtags={["api", "landscape","privacy","alias","tech"]}
                 >
